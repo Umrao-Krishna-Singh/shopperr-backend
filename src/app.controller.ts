@@ -13,7 +13,7 @@ export class AppController {
 
   @Post('/myroute')
   printVal(@Req() request: Request): string {
-    console.log('received data', request.hostname);
+    console.log(request.body);
     return 'done';
   }
 }
