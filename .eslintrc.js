@@ -22,10 +22,14 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'prettier/prettier': [
+    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
+    'unused-imports/no-unused-vars': [
       'warn',
       {
-        endOfLine: 'auto',
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
       },
     ],
   },
