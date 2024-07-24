@@ -22,8 +22,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
-    'unused-imports/no-unused-vars': [
+    '@typescript-eslint/no-unused-vars': [
       'warn',
       {
         vars: 'all',
@@ -32,5 +31,6 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
   },
 };
