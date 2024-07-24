@@ -31,6 +31,6 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
+    'prettier/prettier': ['warn', { endOfLine: 'false' }],
   },
-};
+}
