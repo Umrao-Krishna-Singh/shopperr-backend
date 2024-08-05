@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common'
 import { PostsModule } from '@src/modules/posts/posts.module'
 import { UserModule } from '@src/modules/user/user.module'
 import { HealthCheckModule } from '@src/modules/healthcheck/healthcheck.module'
+import { DatabaseModule } from '@src/database/db.module'
 import { utilities as nestWinstonModuleUtilities, WinstonModule } from 'nest-winston'
 import * as winston from 'winston'
 import { ENV } from '@src/app.config'
@@ -40,6 +41,7 @@ winston.addColors({ info: 'cyan', error: 'bold red' })
         }),
       ],
     }),
+    DatabaseModule,
   ],
   exports: [WinstonModule],
 })
