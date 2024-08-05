@@ -8,7 +8,12 @@ const coerce = z.coerce
 const ENVSchema = z.object({
   API_HOST: coerce.string().ip(),
   API_PORT: coerce.number(),
-  DATABASE_URL: coerce.string(),
+  DB_NAME: coerce.string(),
+  DB_PORT: coerce.number(),
+  DB_USER: coerce.string(),
+  DB_PASS: coerce.string(),
+  DB_HOST: coerce.string(),
+  DB_CONN_LIMIT: coerce.number(),
   NODE_ENV: z.enum(['dev', 'prod']).default('dev'),
   LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug', 'silly']).default('silly'),
 })
