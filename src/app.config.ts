@@ -4,11 +4,11 @@ import { z } from 'zod'
 // import { AxiosRequestConfig } from 'axios'
 // import { isDev } from '@src/constants/environment.constant'
 
-const coerceZ = z.coerce
+const coerce = z.coerce
 const ENVSchema = z.object({
-  API_HOST: coerceZ.string().ip(),
-  API_PORT: coerceZ.number(),
-  DATABASE_URL: coerceZ.string(),
+  API_HOST: coerce.string().ip(),
+  API_PORT: coerce.number(),
+  DATABASE_URL: coerce.string(),
   NODE_ENV: z.enum(['dev', 'prod']).default('dev'),
   LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug', 'silly']).default('silly'),
 })
